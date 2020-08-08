@@ -8,4 +8,8 @@ class Transfer
     @amount = amount
     @status = "pending"
   end
+  
+  def valid?
+    sender.valid? && receiver.valid? #checking to see if both accounts are valid 
+  end
 end
